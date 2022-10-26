@@ -1,0 +1,99 @@
+<br>
+<div class="container">
+
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+
+        <a class="navbar-brand" href="#">
+          <img src="../../../assets/images/logo.jpeg" alt="" width="50" height="50" class="d-inline-block align-text-top">
+          <img src="../../../assets/images/titulo.jpeg" alt="" width="250" height="50" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="enfermeros/nuevo">Enfermero</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/adultoJoven/insertar">Paciente</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/servicios/nuevo">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/anuncios/nuevo">Anuncios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="intereses/nuevo">Interés</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+
+
+          </form>
+        </div>
+      </div>
+    </nav>
+    <h1>Añadir Agit gitdulto Joven</h1>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      <input matInput placeholder="Id" [(ngModel)]="AdultoJoven.id">
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput required placeholder="Nombre" [(ngModel)]="AdultoJoven.nombre">
+
+    </mat-form-field>
+
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Apellido</mat-label>
+      <input type="Apellido" matInput required placeholder="Apellido" [(ngModel)]="AdultoJoven.apellido">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Edad</mat-label>
+      <input type="Edad" matInput required placeholder="Edad" [(ngModel)]="AdultoJoven.edad">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>DNI</mat-label>
+      <input type="DNI" matInput required placeholder="DNI" [(ngModel)]="AdultoJoven.DNI">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Celular</mat-label>
+      <input type="Celular" matInput required placeholder="Celular" [(ngModel)]="AdultoJoven.celular">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="Email" matInput required placeholder="Email" [(ngModel)]="AdultoJoven.Email">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Direccion</mat-label>
+      <input type="Direccion" matInput required placeholder="Direccion" [(ngModel)]="AdultoJoven.direccion">
+    </mat-form-field>
+
+    <br>
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/adultoJoven">Cancelar</button>
+    <p>{{mensaje}}</p>
+
+  </div>

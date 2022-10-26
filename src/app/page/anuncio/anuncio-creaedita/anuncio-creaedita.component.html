@@ -1,0 +1,74 @@
+<div class="container">
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">
+        <img src="../../../assets/images/logo.jpeg" alt="" width="50" height="50" class="d-inline-block align-text-top">
+        <img src="../../../assets/images/titulo.jpeg" alt="" width="250" height="50" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="enfermeros/nuevo">Enfermero</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/adultoJoven/insertar">Paciente</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/servicios/nuevo">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/anuncios/nuevo">Anuncios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="intereses/nuevo">Interés</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+
+
+        </form>
+      </div>
+    </div>
+  </nav>
+<h1> Anuncios</h1>
+
+<mat-form-field class="example-full-width">
+  <mat-label>Id</mat-label>
+  <input matInput placeholder="id" [(ngModel)]="anuncio.id">
+</mat-form-field>
+
+<br>
+
+<mat-form-field class="example-full-width">
+  <mat-label>Precio</mat-label>
+  <input matInput required placeholder="preServicio" [(ngModel)]="anuncio.preServicio">
+
+</mat-form-field>
+
+<br>
+<mat-form-field class="example-full-width">
+  <mat-label>Fecha de Publicacion</mat-label>
+  <input type="fechaPublicacion" matInput required placeholder="fechaPublicacion" [(ngModel)]="anuncio.fechaPublicacion">
+</mat-form-field>
+<br>
+<mat-form-field class="example-full-width">
+  <mat-label>Servicio</mat-label>
+  <input type="servicio" matInput required placeholder="servicio" [(ngModel)]="anuncio.servicio">
+</mat-form-field>
+
+<br>
+<button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+<button mat-raised-button color="warn" routerLink="/anuncios">Cancelar</button>
+<p>{{mensaje}}</p>
+
+</div>
+

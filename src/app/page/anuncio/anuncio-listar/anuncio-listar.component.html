@@ -1,0 +1,100 @@
+
+<div class="container">
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">
+        <img src="../../../assets/images/logo.jpeg" alt="" width="50" height="50" class="d-inline-block align-text-top">
+        <img src="../../../assets/images/titulo.jpeg" alt="" width="250" height="50" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="enfermeros/nuevo">Enfermero</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/adultoJoven/insertar">Paciente</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/servicios/nuevo">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/anuncios/nuevo">Anuncios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="intereses/nuevo">Interés</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <app-anuncio-buscar></app-anuncio-buscar>
+
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<div style = "text-align: center;">
+
+<h1>Lista de anuncios</h1>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8"  >
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="idAnuncio">
+    <th mat-header-cell *matHeaderCellDef> Id </th>
+    <td mat-cell *matCellDef="let element"> {{element?.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="preServicio">
+    <th mat-header-cell *matHeaderCellDef> Precio </th>
+    <td mat-cell *matCellDef="let element"> {{element?.preServicio}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="fechaPublicacion">
+    <th mat-header-cell *matHeaderCellDef> Fecha de publicación </th>
+    <td mat-cell *matCellDef="let element"> {{element?.fechaPublicacion}} </td>
+  </ng-container>
+  <!-- Weight Column -->
+  <ng-container matColumnDef="servicio">
+    <th mat-header-cell *matHeaderCellDef> Servicio </th>
+    <td mat-cell *matCellDef="let element"> {{element?.servicio}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="accion1">
+    <th mat-header-cell *matHeaderCellDef> Acciones</th>
+    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+      [routerLink]="['edicion',element?.id]">Actualizar</button>
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="accion2">
+    <th mat-header-cell *matHeaderCellDef> Acciones</th>
+    <td mat-cell *matCellDef="let element">
+       <button mat-raised-button color="warn" (click)="confirmar(element.id)">Eliminar</button>
+    </td>
+  </ng-container>
+
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<div class="example-button-container">
+
+  <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+    routerLink="/anuncios/nuevo">
+    <mat-icon>plus_one</mat-icon>
+  </button>
+</div>
+
