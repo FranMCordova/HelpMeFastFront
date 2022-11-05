@@ -36,6 +36,16 @@ import { InteresListarComponent } from './page/interes/interes-listar/interes-li
 import { InteresDialogoComponent } from './page/interes/interes-listar/interes-dialogo/interes-dialogo.component';
 import { InteresCreaeditaComponent } from './page/interes/interes-creaedita/interes-creaedita.component';
 import { InteresBuscarComponent } from './page/interes/interes-buscar/interes-buscar.component';
+import { DistritoComponent } from './page/distrito/distrito.component';
+import { ComentariosComponent } from './page/comentarios/comentarios.component';
+import { DistritoListarComponent } from './page/distrito/distrito-listar/distrito-listar.component';
+import { ComentariosListarComponent } from './page/comentarios/comentarios-listar/comentarios-listar.component';
+import { DistritoDialogoComponent } from './page/distrito/distrito-listar/distrito-dialogo/distrito-dialogo.component';
+import { ComentariosDialogoComponent } from './page/comentarios/comentarios-listar/comentarios-dialogo/comentarios-dialogo.component';
+import { DistritoCreaeditaComponent } from './page/distrito/distrito-creaedita/distrito-creaedita.component';
+import { ComentariosCreaeditaComponent } from './page/comentarios/comentarios-creaedita/comentarios-creaedita.component';
+import { DistritoBuscarComponent } from './page/distrito/distrito-buscar/distrito-buscar.component';
+import { ComentariosBuscarComponent } from './page/comentarios/comentarios-buscar/comentarios-buscar.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +73,17 @@ import { InteresBuscarComponent } from './page/interes/interes-buscar/interes-bu
     InteresListarComponent,
     InteresDialogoComponent,
     InteresCreaeditaComponent,
-    InteresBuscarComponent
+    InteresBuscarComponent,
+    DistritoComponent,
+    ComentariosComponent,
+    DistritoListarComponent,
+    ComentariosListarComponent,
+    DistritoDialogoComponent,
+    ComentariosDialogoComponent,
+    DistritoCreaeditaComponent,
+    ComentariosCreaeditaComponent,
+    DistritoBuscarComponent,
+    ComentariosBuscarComponent
   ],
   imports: [
     BrowserModule,

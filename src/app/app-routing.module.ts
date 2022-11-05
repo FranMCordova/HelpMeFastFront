@@ -1,3 +1,7 @@
+import { ComentariosCreaeditaComponent } from './page/comentarios/comentarios-creaedita/comentarios-creaedita.component';
+import { ComentariosComponent } from './page/comentarios/comentarios.component';
+import { DistritoCreaeditaComponent } from './page/distrito/distrito-creaedita/distrito-creaedita.component';
+import { DistritoComponent } from './page/distrito/distrito.component';
 import { InteresCreaeditaComponent } from './page/interes/interes-creaedita/interes-creaedita.component';
 import { InteresComponent } from './page/interes/interes.component';
 import { EnfermeroCreaeditaComponent } from './page/enfermero/enfermero-creaedita/enfermero-creaedita.component';
@@ -32,6 +36,18 @@ const routes: Routes = [
       path: 'intereses', component: InteresComponent, children: [
         { path: 'nuevo', component: InteresCreaeditaComponent },
         { path: 'edicion/:id', component: InteresCreaeditaComponent }
+      ]
+    },
+    {
+      path: 'distrito', component: DistritoComponent, children: [
+        { path: 'nuevo', component: DistritoCreaeditaComponent },
+        { path: 'edicion/:id', component: DistritoCreaeditaComponent }
+      ]
+    },
+    {
+      path: 'comentarios', component: ComentariosComponent, children: [
+        { path: 'nuevo', component: ComentariosCreaeditaComponent },
+        { path: 'edicion/:id', component: ComentariosCreaeditaComponent }
       ]
     }
 ];

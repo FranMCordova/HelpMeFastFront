@@ -122,6 +122,34 @@ module.exports = function () {
             id:3,
             medidaInteres: "Medio",
         }
+      ],
+      distrito: [
+        {
+            id:1,
+            distrito: "san miguel",
+        },
+        {
+            id:2,
+            distrito: "miraflores",
+        },
+        {
+            id:3,
+            distrito: "la molina",
+        }
+      ],
+      comentarios: [
+        {
+            id:1,
+            comentarios: "muy bueno",
+        },
+        {
+            id:2,
+            comentarios: "buena atención",
+        },
+        {
+            id:3,
+            comentarios: "lo recomiendo",
+        }
       ]
 
     }
